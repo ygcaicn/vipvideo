@@ -21,6 +21,5 @@ function getvideo(){
     }
 
     function feedback(){
-        var baocuotishi =document.getElementById("baocuotishi").value;
-        alert("请联系"+baocuotishi+"报错")
+        alert("请联系ygcaicn@gmail.com报错")
     }
