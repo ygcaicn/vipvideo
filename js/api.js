@@ -1,12 +1,11 @@
 $(document).ready(function() {
-		$("#selectid").load("api.html");
-		$("button#demo").click();
+		$("#insopt").load("api.html");
 	});
 
 function getvideo(){
 	var vurl = document.getElementById("url").value;
-	var apilist = document.getElementById("selectid");
-	var index = document.getElementById("selectid").selectedIndex;
+	var apilist = document.getElementById("insopt");
+	var index = document.getElementById("insopt").selectedIndex;
 	var api = apilist.options[index].value;
 	if (api == "userapi")
 	{
@@ -22,8 +21,8 @@ function getvideo(){
 	}
 
 	function showiapi(){
-		var apilist = document.getElementById("selectid");
-		var index = document.getElementById("selectid").selectedIndex;
+		var apilist = document.getElementById("insopt");
+		var index = document.getElementById("insopt").selectedIndex;
 		var api = apilist.options[index].value;
 		if (api == "userapi")
 		{
