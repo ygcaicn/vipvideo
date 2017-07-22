@@ -9,7 +9,7 @@ function getvideo(){
 	var api = apilist.options[index].value;
 	if (api == "userapi")
 	{
-		api = document.getElementById("userapi").value;
+		api = document.getElementById("uapi").value;
 	}
 
 	if (vurl =="输入您想播放的视频地址......") {
