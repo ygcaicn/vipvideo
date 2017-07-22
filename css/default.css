@@ -41,8 +41,12 @@ text-align: center;
 		}
 
 #description{
-}
 
+}
+#vlink{
+border: 1px solid #bde9ff;
+width: 100%;
+}
 #api{
 }
 #url{
@@ -50,9 +54,10 @@ width: 95%;
 margin-bottom: 2%;
 height:30px;
 border-radius: 2px;
+display:block;
 }
 .selectid{
-display:block;
+display:inline;
 }
 
 .userapi{
@@ -93,6 +98,6 @@ text-align: center;font-size: 50%;width:100%;margin-top: 40px;
     .fsfdsf{padding: 0 20px;}
     .afdsfds{color: #001a35;text-decoration:none;font-size: 1rem;}
     .afdsfds:hover{ color:#ffffff; }
-    .divsdasd{border: 1px solid #bde9ff;width: 100%;}
-    #seleid{width: 66px; height: 30px;border-radius: 2px;}
+    .divsdasd{}
+  
 
