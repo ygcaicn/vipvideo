@@ -37,10 +37,6 @@ function getvideo(){
 
 	}
 
-    function sdfdf(){
-        $('#guanggkjdn').css('display','none');
-    }
-
     function feedback(){
         alert("请联系ygcaicn@gmail.com报错")
     }
