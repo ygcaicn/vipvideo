@@ -14,7 +14,11 @@ html body{
 }
 
 #header{
-background-color: #001a35;text-align: center;margin-bottom: 2%;padding: 10px 0 10px 0	
+background-color: #001a35;
+text-align: center;
+margin-bottom: 2%;
+padding: 10px 0 10px 0
+border-radius: 20px;	
 }
 .header_a{color: #00c0ef;font-size: 28px;}
 .hicon{width:30px;}
