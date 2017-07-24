@@ -1,11 +1,16 @@
 $(document).ready(function() {
-		$("#insopt").load("api.html");
-		var xx = $.getUrlParam('src');
-		var api="http://api.91exp.com/svip/?url=";
-		if(xx != null)
-		{
-			document.getElementById("vplay").src=api+xx;
-		}
+		var apilist;
+		$("#insopt").load("api.html",function(){
+			apilist = document.getElementById("insopt");
+			var xx = $.getUrlParam("src");
+			if(xx != null)
+			{
+				var pindex = $.getUrlParam("index");
+				api=apilist.options[pindex?pindex:0].value;
+				document.getElementById("vplay").src=api+xx;
+			}
+		});
+
 	});
 
 (function ($) {
@@ -29,11 +34,7 @@ function getvideo(){
 	var xx = $.getUrlParam('src');
 	if(xx != null)
 	{
-		var pindex = $.getUrlParam('index');
-		if(pindex != null)
-		{
-			api=apilist.options[pindex].value;
-		}
+
 		document.getElementById("vplay").src=api+xx;
 		return true;
 	}
@@ -62,3 +63,4 @@ function getvideo(){
     function feedback(){
         alert("请联系ygcaicn@gmail.com报错")
     }
+
