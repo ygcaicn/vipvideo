@@ -31,13 +31,14 @@ function getvideo(){
 	{
 		api = document.getElementById("uapi").value;
 	}
+/*
 	var xx = $.getUrlParam('src');
 	if(xx != null)
 	{
-
 		document.getElementById("vplay").src=api+xx;
 		return true;
 	}
+*/
 	if (vurl =="输入您想播放的视频地址......") {
                 alert("请先在输入框内输入正确的视频地址哦！");
                 return false;
