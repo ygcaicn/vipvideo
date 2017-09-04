@@ -9,6 +9,8 @@ body{
 	margin:auto;
 	left: 0;
 	right: 0;
+	font-family: "Helvetica Neue",arial,sans-serif;
+    font-size: 15px;
 
 }
 #main{
@@ -101,7 +103,7 @@ display:block;
 
 #foot{
 text-align: center;
-font-size: 50%;
+font-size: 80%;
 width:100%;
 margin-top: 40px;
 }
