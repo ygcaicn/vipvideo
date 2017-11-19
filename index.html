@@ -23,7 +23,7 @@
 <script>
 $(document).ready(function(){
     $(".okbutton").click(function(){
-            $("#videoTitle").load($("#url").val());
+            $("#videoTitle").arrt("src",$("#url").val());
         });
 });
 </script>
@@ -36,7 +36,7 @@ $(document).ready(function(){
     </div>
 
     <iframe id="notice" src="notice.html"></iframe>
-    <div id="videoTitle"></div>
+    <iframe id="videoTitle" src=""></iframe>
     <div id="ckvip">
         <div id="videoname"></div>
         <iframe id="vplay" src="play_default.html"></iframe>
