@@ -6,11 +6,11 @@
     <meta name="keywords" content=vip视频破解,vip视频解析,爱奇艺会员帐号共享,优酷会员帐号共享>
     <meta name="description" content="最新最热的的电影电视剧,免费在线观看,vip视频解析,免费电影,爱奇艺会员帐号共享,优酷会员帐号共享,找视频,云盘资源,最新最热的的电影电视剧，免费在线观看,免费在线电影,院线新电影,院线电影,电影票" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=0" />
-	<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/api.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="icon" href="http://blog.cumtpn.com/img/favicon.ico">
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
 <script>
@@ -18,6 +18,14 @@
     google_ad_client: "ca-pub-8388501523245111",
     enable_page_level_ads: true
   });
+</script>
+
+<script>
+$(document).ready(function(){
+    $(".okbutton").click(function(){
+            $("#videoTitle").load($("#url").val());
+        });
+});
 </script>
 
 </head>
@@ -28,18 +36,18 @@
     </div>
 
     <iframe id="notice" src="notice.html"></iframe>
-
-	<div id="ckvip">
-		<div id="videoname"></div>
+    <div id="videoTitle"></div>
+    <div id="ckvip">
+        <div id="videoname"></div>
         <iframe id="vplay" src="play_default.html"></iframe>
     </div>
 
     <div id="description">
         <p><b>
-		<a target="_blank" href="http://blog.cumtpn.com/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html#more">
+        <a target="_blank" href="http://blog.cumtpn.com/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html#more">
                     <input class="feedb" type="button" value="使用说明">
          </a>
-			【如多次刷新后还播放不了，请尝试换个解析接口，如仍不能解决欢迎<input class="feedb" type="button" value="报错" onclick="feedback()">，我们会尽快解决】</b></p>
+            【如多次刷新后还播放不了，请尝试换个解析接口，如仍不能解决欢迎<input class="feedb" type="button" value="报错" onclick="feedback()">，我们会尽快解决】</b></p>
         <br/>
         <div class="vlink">
             <p class="v1">各大视频网站vip视频破解,进入各大网站获取视频网址</p>
@@ -47,33 +55,33 @@
         </div>
     </div>
 
-	<div id=api>
+    <div id=api>
         <input id="url" type="text" value="输入您想播放的视频地址......" onfocus="if(this.value=='输入您想播放的视频地址......')this.value='';" onblur="if(this.value=='')this.value='输入您想播放的视频地址......';">
 
-		<p class="selectid">解析接口：</p>
-		<select class="selectid" id="insopt" onchange="showiapi()">
-		</select>
+        <p class="selectid">解析接口：</p>
+        <select class="selectid" id="insopt" onchange="showiapi()">
+        </select>
 
-		<p class="userapi">用户自定义API解析：</p>
-		<input id="uapi" class="userapi" type="text" value="https://api.flvsp.com/?url=">
+        <p class="userapi">用户自定义API解析：</p>
+        <input id="uapi" class="userapi" type="text" value="https://api.flvsp.com/?url=">
 
-		<input class="okbutton" type="button" onclick="getvideo()" value="立即播放">
+        <input class="okbutton" type="button" onclick="getvideo()" value="立即播放">
     </div>
 
 </div>
 
-	<div>
-		<li>推荐使用靠前的通道</li><br>
-		<li>通道1如果无法全屏播放，可以使用F11全屏+放大观看，也可以换一个通道</li><br>
-		<li>推荐使用PC观看，移动设备观看容易出问题</li><br>
-		<li>如果遇到无法播放 切换播放通道 不同的网站可能跟解析服务器支持有关</li><br>
-		<li>这些接口来源于网络泄露特别是会员解析通道 低调使用 定期更新</li><br>
-		<li>QQ群  </li><br>
-		<li>Design By Jachin </li><br>
-	</div>
-	<div id="textlogobase">
-	<div id="textlogo">
-		<pre >
+    <div>
+        <li>推荐使用靠前的通道</li><br>
+        <li>通道1如果无法全屏播放，可以使用F11全屏+放大观看，也可以换一个通道</li><br>
+        <li>推荐使用PC观看，移动设备观看容易出问题</li><br>
+        <li>如果遇到无法播放 切换播放通道 不同的网站可能跟解析服务器支持有关</li><br>
+        <li>这些接口来源于网络泄露特别是会员解析通道 低调使用 定期更新</li><br>
+        <li>QQ群  </li><br>
+        <li>Design By Jachin </li><br>
+    </div>
+    <div id="textlogobase">
+    <div id="textlogo">
+        <pre >
 /**_* * * * * * _* * *_* * * *
   (_) __ _  ___| |__ (_)_ __
   | |/ _` |/ __| '_ \| | '_ \
@@ -81,9 +89,9 @@
  _/ |\__,_|\___|_| |_|_|_| |_|
 |__/
 * * * * * * * * * * * * * * * */
-		</pre>
-	</div>
-	</div>
+        </pre>
+    </div>
+    </div>
 
     <div id="disqus_thread"></div>
     <script>
@@ -114,16 +122,16 @@
     </script>
 
 
-	<div class="cnzz" style=display:none>
-		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263020785'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1263020785%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
-	</div>
+    <div class="cnzz" style=display:none>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263020785'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1263020785%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
 
 
-	<footer id="foot">
+    <footer id="foot">
         <p class="pioemmmmd">本站解析接口来源于网络</p>
-		<br/>
-		Copyright &copy;2016<a href="http://blog.cumtpn.com">Jachin</a>Allrights reserved.Used with permission.
-	</footer>
+        <br/>
+        Copyright &copy;2016<a href="http://blog.cumtpn.com">Jachin</a>Allrights reserved.Used with permission.
+    </footer>
 </div>
 <!--end main-->
 </body>
