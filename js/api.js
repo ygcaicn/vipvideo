@@ -13,6 +13,8 @@ $(document).ready(function() {
 
 	});
 
+
+
 (function ($) {
 	$.getUrlParam = function (name) {
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -45,7 +47,7 @@ function getvideo(){
 				}
 
 	document.getElementById("vplay").src=api+vurl;
-     window.history.pushState({},0,'http://'+window.location+'?index='+index+'&url='+vurl);  
+     window.history.pushState({},0,'http://'+window.location.pathname+'?index='+index+'&url='+vurl);  
 	}
 
 	function showiapi(){
