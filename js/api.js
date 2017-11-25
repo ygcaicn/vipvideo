@@ -45,6 +45,7 @@ function getvideo(){
 				}
 
 	document.getElementById("vplay").src=api+vurl;
+     window.history.pushState({},0,'http://'+window.location.host+'?index='+index+'&url='+url);  
 	}
 
 	function showiapi(){
@@ -56,7 +57,7 @@ function getvideo(){
 			$('.userapi').css('display','inline');
 		}
 		else
-		{			
+		{
 			$('.userapi').css('display','none');
 		}
 	}
@@ -64,4 +65,3 @@ function getvideo(){
     function feedback(){
         alert("请联系ygcaicn@gmail.com报错")
     }
-
