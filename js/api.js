@@ -28,7 +28,9 @@ $(document).ready(function() {
 (function ($) {
 		$(".okbutton").click(function(){
 		$("#source_video").attr("src",$("#url").val());
+		$("#videoname").val("Hello");
 		});
+
 })(jQuery);
 
 
