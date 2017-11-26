@@ -125,7 +125,7 @@ width: 600px;
 
 #foot{
 text-align: center;
-font-size: 80%;
+font-size: 10px;
 width:100%;
 margin-top: 40px;
 color: #111;
@@ -136,10 +136,13 @@ font-size:80%;
 border:2px solid #bde9ff;
 }
 
-
-
 li {
-    list-style: none
+      list-style-image:url("./list.png");
+  	list-style-type:circle;
+	height: 24px;
+}
+li p{
+
 }
 
 a:link,a:visited {
