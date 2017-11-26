@@ -1,3 +1,6 @@
+html{
+    font-size: 62.5%;
+}
 body{
 	background-color: #008532;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQBAMAAAD+CqKmAAAAElBMVEXz8/Po6Oj////4+Pj7+/v19fXck713AAAAbklEQVQI11XNwQkDMQxE0QFJBWRKSAUCxXeB7bvA2f5bCcHgTf7hXx8eP4HPb/vgLAEoUuKgqeBiZmWA3dBfjJQBcK2spJWqgS1ChLDIAU7NcI6Y3v6djexj2U1BZzsUfL0PBe9+KMh1U7CSQ30ArNcZPoEeBscAAAAASUVORK5CYII=');
@@ -5,28 +8,31 @@ body{
 	text-align: center;
 	left: 0;
 	right: 0;
-	font-family: "Helvetica Neue",arial,sans-serif;
-	font-size: 15px;
+    font-size: 1.5rem;
+	font-family: "Helvetica Neue",arial,"Microsoft Yahei",sans-serif;
+    float: left;
 }
 #main{
     margin:0 auto;
-    width:auto;
+    width:80%;
 }
 #header{
 background-color: #001a35;
 margin-bottom: 2%;
-padding: 10px 0 10px 0;
-border-radius: 20px;
+padding: 1rem 0 1rem 0;
+border-radius: 2rem;
+font-size: 2.8rem;
 }
-#header a{margin:auto;height:30px;color: #00c0ef;font-size: 28px;}
-#header img{width:30px;height:30px;border-radius: 30px;}
+#header a{margin:auto;height:3rem;color: #00c0ef;}
+#header img{width:3rem;height:3rem;border-radius:3rem;}
 
 #notice{
 border-width:0;
 border-style: none;
 border-color: rgba(255, 255, 255, 0.5);
 width: 100%;
-height: 74px;
+height:80px;
+
 overflow:hidden;
 }
 
@@ -42,15 +48,21 @@ text-align: center;
 #videoname
 {
 }
+#prevplay{
+margin: auto;
+width:100%;
+height:37rem;
+padding-bottom:0%;
+}
 #vplay{
-width:90%;
-height:80vh;
+width:100%;
+height:370px;
 border-right-width: 8px;
 border-top-width: 5px;
 border-bottom-width: 5px;
 border-left-width: 8px;
 border-color: black;
-border-radius: 5px;
+border-radius:1rem;
 overflow:hidden;
 background-color: rgb(191, 191, 191);
 background-image:url(!snow.gif);
@@ -58,32 +70,33 @@ background-image:url(!snow.gif);
 
 #description{
 text-align: center;
-font-size: 15px;
-margin: 0 5px 0 5px;
+padding: 0 0.5rem 0 0.5rem;
 color: #fb6c03;
 }
 .feedback{
-margin-left: 2px;
+margin-left: 0.2rem;
 width: auto;
 background-color:#DB7326;
-border-radius: 5px;
-font-size: 15px;
+border-radius: 0.5rem;
 color:white;
 }
 
 #api{
-margin-bottom: 2%;
-margin-top: 30px;
-margin-bottom: 50px;
+margin-top: 2rem;
+margin-bottom: 2rem;
 text-align: left;
 background-image: url();
 display:block;
 }
+#api p{
+    font-size: 1.8rem;
+    color:#ff7500;
+}
+
 #url{
-width: 95%;
+width: 80%;
 margin-bottom: 2%;
-height:30px;
-border-radius: 2px;
+height:3rem;
 display:block;
 }
 .selectid{
@@ -95,24 +108,56 @@ display:none;
 .okbutton{
 width: 20%;
 height:30px;
-background-color: #c2e0ff;
-border-radius: 5px;
-font-size: 15px;
+color:white;
+background-color: #DB7326;
+border-radius: 0.5rem;
 display:block;
+font-weight:bold;
+font-size: 1.8rem;
 }
 
 .msg{
+    clear:both;
 	display: block;
 }
+
+
 .msg_row2{
-padding-top: 30px;
 clear:both;
+padding-top: 30px;
 margin:0 auto;
-width: 600px;
+width:auto;
 }
 .logs{
     text-align: left;
-    margin:0;
+    margin:auto;
+    width: 80%;
+    display: block;
+}
+.logs .li{
+    width:auto;
+    height: 4rem;
+    clear: both;
+    display: block;
+    padding-top:2rem;
+}
+
+.logs .img{
+    width:3rem;
+    height:3rem;
+    border-radius: 3rem;
+    background-image:url("./list.png");
+    background-repeat: no-repeat;
+    float:left;
+}
+.logs .p{
+    width:auto;
+    height: auto;
+    margin: 0;
+    display: block;
+    padding-top:0.8rem;
+    float: left;
+    display: inline;
 }
 
 #textlogobase{
@@ -122,14 +167,14 @@ text-align:center;
 text-align:left;
 display:inline-block;
 margin:0 auto;
-width: 600px;
+width: auto;
 }
 
 #foot{
 text-align: center;
-font-size: 10px;
+font-size: 1.3rem;
 width:100%;
-margin-top: 40px;
+margin-top: 4rem;
 color: #111;
 }
 #cnzz_stat_icon_1263020785{
@@ -138,22 +183,10 @@ font-size:80%;
 border:2px solid #bde9ff;
 }
 
-li {
-      list-style-image:url("./list.png");
-  	list-style-type:circle;
-	height: 24px;
-}
-li p{
 
-}
 
 a:link,a:visited {
     text-decoration: none
-}
-
-.logos_lists dl dd,.logos_lists h4 {
-    font-size: 14px;
-    font-family: "Microsoft Yahei";
 }
 
 a img,img {
@@ -161,17 +194,10 @@ a img,img {
     border: 0
 }
 
-.logos_lists h4 {
-    padding: 10px 0;
-    text-align: left;
-    color: #666;
-    font-weight: 400
-}
-
 .logos_lists dl {
     float: left;
     position: relative;
-    padding: 16px 14px;
+    padding: 1.5rem 1rem;
     margin: 10px;
     background: #fff;
     border: 1px solid #ededed;
@@ -191,7 +217,7 @@ a img,img {
 }
 
 .logos_lists dl dt img {
-    width: 110px
+    width: 8rem;
 }
 
 .logos_lists dl dd {
