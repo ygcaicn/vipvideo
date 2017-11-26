@@ -54,7 +54,8 @@ border: 0;
 text-align: center;
 }
 #vplay{
-	width:90%; height:650px;
+        width:90%;
+	height:80vh;
         border-right-width: 8px;
         border-top-width: 5px;
         border-bottom-width: 5px;
