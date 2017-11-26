@@ -10,7 +10,7 @@ body{
 }
 #main{
     margin:0 auto;
-    width:1000px;
+    width:auto;
 }
 #header{
 background-color: #001a35;
@@ -60,6 +60,7 @@ background-image:url(!snow.gif);
 text-align: center;
 font-size: 15px;
 margin: 0 5px 0 5px;
+color: #fb6c03;
 }
 .feedback{
 margin-left: 2px;
