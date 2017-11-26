@@ -44,17 +44,17 @@ $(document).ready(function(){
     <div id="ckvip">
         <div id="videoname"></div>
 
-<div class="rapair_status">
-    <div class="repair_title status_title">
-    </div>
-    <div class="statis_machinetype">
-           <span style="white-space:pre"> </span>
-           <div class="fullscreen" id="fullscreen">
-                      <img  id="fullscreenimg" src="css/fullscreen.png" />
+        <div class="rapair_status">
+            <div class="repair_title status_title">
             </div>
-                   <iframe id="vplay" src="play_default.html" class="vplay"></iframe>
-    </div>
-</div>
+            <div class="statis_machinetype">
+                   <span style="white-space:pre"> </span>
+                   <div class="fullscreen" id="fullscreen">
+                              <img  id="fullscreenimg" src="css/fullscreen.png" />
+                    </div>
+                           <iframe id="vplay" src="play_default.html" class="vplay"></iframe>
+            </div>
+        </div>
 
     </div>
 
@@ -124,6 +124,7 @@ $(document).ready(function(){
            document.msFullscreenElement){
             if (document.exitFullscreen) {
                 document.exitFullscreen();
+
             } else if (document.mozCancelFullScreen) {
                 document.mozCancelFullScreen();
             } else if (document.webkitExitFullscreen) {
