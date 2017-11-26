@@ -8,9 +8,8 @@ $(document).ready(function() {
 				var pindex = $.getUrlParam("index");
 				api=apilist.options[pindex?pindex:0].value;
 				document.getElementById("vplay").src=api+xx;
-				$("#insopt").get(0).selectedIndex=index;
-				$("url").val(xx);
-
+				$("#insopt").get(0).selectedIndex=(pindex?pindex:0);
+				$("#url").val(xx);
 			}
 		});
 
