@@ -1,4 +1,9 @@
-$(document).ready(function() {
+
+
+
+
+(function ($) {
+	$(document).ready(function() {
 		var apilist;
 		$("#insopt").load("api.html",function(){
 			apilist = document.getElementById("insopt");
@@ -16,10 +21,7 @@ $(document).ready(function() {
 		});
 
 	});
-
-
-
-(function ($) {
+	
 	$.getUrlParam = function (name) {
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
 	var r = window.location.search.substr(1).match(reg);

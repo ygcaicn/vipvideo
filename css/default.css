@@ -51,24 +51,28 @@ width:40px; height:40px;
 }
 
 
-#ckvip{
+#vip{
 position:relative;
 border: 0;
 text-align: center;
 }
+#videoname
+{
+
+}
 #vplay{
-		width:90%;
-	height:80vh;
-		border-right-width: 8px;
-		border-top-width: 5px;
-		border-bottom-width: 5px;
-		border-left-width: 8px;
-		border-color: black;
-		border-radius: 5px;
-		overflow:hidden;
-		background-color: rgb(191, 191, 191);
-		background-image:url(!snow.gif);
-		}
+width:90%;
+height:80vh;
+border-right-width: 8px;
+border-top-width: 5px;
+border-bottom-width: 5px;
+border-left-width: 8px;
+border-color: black;
+border-radius: 5px;
+overflow:hidden;
+background-color: rgb(191, 191, 191);
+background-image:url(!snow.gif);
+}
 
 #description{
 text-align: center;font-size: 0.65rem;margin: 0 5px 0 5px;
@@ -88,12 +92,12 @@ width: 100%;
 .v2{color: #0033cc;text-decoration:none;font-size: 1rem;}
 
 #api{
-	margin-bottom: 2%;
-	margin-top: 30px;
-	margin-bottom: 50px;
-	text-align: left;
-	background-image: url();
-	display:block;
+margin-bottom: 2%;
+margin-top: 30px;
+margin-bottom: 50px;
+text-align: left;
+background-image: url();
+display:block;
 }
 #url{
 width: 95%;
@@ -129,9 +133,9 @@ font-size:80%;
 border:2px solid #bde9ff;
 }
 #textlogobase{
-	text-align:center;
+text-align:center;
 }
 #textlogo{
-	text-align:left;
-	display:inline-block;
+text-align:left;
+display:inline-block;
 }

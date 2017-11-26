@@ -10,42 +10,29 @@
 	<script type="text/javascript" charset="utf-8" src="js/api.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/default.css" />
 	<link rel="icon" href="http://blog.cumtpn.com/img/favicon.ico">
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-	google_ad_client: "ca-pub-8388501523245111",
-	enable_page_level_ads: true
-  });
-</script>
 </head>
 <body>
 <div id="main">
+	<!--header-->
 	<div id="header">
 		<a href="http://blog.cumtpn.com" class="header_a" style="text-decoration:none;"><img class="hicon" src="http://blog.cumtpn.com/img/favicon.ico">VIP视频解析+去广告</a>
 	</div>
+	<!--header end-->
 
+	<!--notice-->
 	<iframe id="notice" src="notice.html"></iframe>
-    
+	<!--notice end-->
+	<!--source_video-->
 	<iframe id="source_video" src=""></iframe>
-	<div id="ckvip">
+	<!--source_video end-->
+	<!--vip-->
+	<div id="vip">
 		<div id="videoname"></div>
-
-		<div class="rapair_status">
-			<div class="repair_title status_title">
-			</div>
-			<div class="statis_machinetype">
-				   <span style="white-space:pre"> </span>
-				   <div class="fullscreen" id="fullscreen">
-							  <img  id="fullscreenimg" src="css/fullscreen.png" />
-					</div>
-						   <iframe id="vplay" src="play_default.html" class="vplay"></iframe>
-			</div>
-		</div>
-
+		<iframe id="vplay" src="play_default.html" class="vplay" allowFullScreen=true></iframe>
 	</div>
-
+	<!--vip end-->
+	<!--description-->
 	<div id="description">
 		<p><b>
 		<a target="_blank" href="http://blog.cumtpn.com/%E7%BD%91%E7%BB%9C/VIP%E8%A7%86%E9%A2%91%E8%A7%A3%E6%9E%90-%E5%8E%BB%E5%B9%BF%E5%91%8A.html#more">
@@ -58,7 +45,8 @@
 			<p><a target="_blank" class="v2" href="http://www.le.com/">乐视</a>、<a target="_blank" class="v2" href="https://v.qq.com">腾讯</a>、<a target="_blank" class="v2" href="http://www.iqiyi.com/">爱奇艺</a>、<a target="_blank" class="v2" href="http://www.youku.com/">优酷</a>、<a target="_blank" class="v2" href="http://www.tudou.com/">土豆</a>、<a target="_blank" class="v2" href="http://www.mgtv.com/">芒果</a>、<a target="_blank" class="v2" href="http://tv.sohu.com/">搜狐</a>、<a target="_blank" class="v2" href="http://www.1905.com/">1905</a>、<a target="_blank" class="v2" href="http://www.pptv.com/">pptv</a>、<a target="_blank" class="v2" href="http://www.fun.tv/">风行</a>、<a target="_blank" class="v2" href="http://www.wasu.cn/">华数</a></p>
 		</div>
 	</div>
-
+	<!--description end-->
+	<!--api-->
 	<div id=api>
 		<input id="url" type="text" value="输入您想播放的视频地址......" onfocus="if(this.value=='输入您想播放的视频地址......')this.value='';" onblur="if(this.value=='')this.value='输入您想播放的视频地址......';">
 
@@ -71,139 +59,83 @@
 
 		<input class="okbutton" type="button" onclick="getvideo()" value="立即播放">
 	</div>
-
-</div>
-
+	<!--api end-->
+	<!--msg-->
 	<div>
-		<li>最新更新,可以一键分享视频,好友打开后直接可以看!</li><br>
-		<li>推荐使用靠前的通道</li><br>
-		<li>通道1如果无法全屏播放，可以使用F11全屏+放大观看，也可以换一个通道</li><br>
-		<li>推荐使用PC观看，移动设备观看容易出问题</li><br>
-		<li>如果遇到无法播放 切换播放通道 不同的网站可能跟解析服务器支持有关</li><br>
-		<li>这些接口来源于网络泄露特别是会员解析通道 低调使用 定期更新</li><br>
-		<li>QQ群  </li><br>
-		<li>Design By Jachin </li><br>
+		<div>
+			<li>最新更新,可以一键分享视频,好友打开后直接可以看!</li><br>
+			<li>推荐使用靠前的通道</li><br>
+			<li>通道1如果无法全屏播放，可以使用F11全屏+放大观看，也可以换一个通道</li><br>
+			<li>推荐使用PC观看，移动设备观看容易出问题</li><br>
+			<li>如果遇到无法播放 切换播放通道 不同的网站可能跟解析服务器支持有关</li><br>
+			<li>这些接口来源于网络泄露特别是会员解析通道 低调使用 定期更新</li><br>
+			<li>QQ群  </li><br>
+			<li>Design By Jachin </li><br>
+		</div>
+		<div id="textlogobase">
+			<div id="textlogo">
+				<pre >
+					/**_* * * * * * _* * *_* * * *
+					  (_) __ _  ___| |__ (_)_ __
+					   | |/ _` |/ __| '_ \| | '_ \
+					   | | (_| | (__| | | | | | | |
+					_/ |\__,_|\___|_| |_|_|_| |_|
+					|__/
+					* * * * * * * * * * * * * * * */
+				</pre>
+			</div>
+		</div>
 	</div>
-	<div id="textlogobase">
-	<div id="textlogo">
-		<pre >
-/**_* * * * * * _* * *_* * * *
-  (_) __ _  ___| |__ (_)_ __
-  | |/ _` |/ __| '_ \| | '_ \
-  | | (_| | (__| | | | | | | |
- _/ |\__,_|\___|_| |_|_|_| |_|
-|__/
-* * * * * * * * * * * * * * * */
-		</pre>
+	<!--msg end-->
+	<!--extend-->
+	<div class="extend">
+		<!--comments-->
+		<div class="comments">
+			<!--disqus-->
+			<div id="disqus_thread"></div>
+			<script>
+				/**
+				*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+				/*
+				var disqus_config = function () {
+				this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				};
+				*/
+				(function() { // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				s.src = 'https://vipvideo.disqus.com/embed.js';
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+			</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<script id="dsq-count-scr" src="//vipvideo.disqus.com/count.js" async></script>
+			<!--disqus end-->
+		</div>
+		<!--comments end-->
+		<!--share-->
+		<div class="share">
+			<!--share-->
+			<script>
+				window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"jachin 视频","bdMini":"2","bdMiniList":["weixin","mshare","sqq","qzone","tsina","bdysc","youdao","tqq","kaixin001","tieba","douban","renren","tqf","bdxc","bdhome","evernotecn","meilishuo","fbook","mogujie","mail","linkedin","ty","twi","sdo","ibaidu"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"left","bdTop":"129"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+			</script>
+			<!--share end-->
+		</div>
+		<!--share end-->
+		<!--cnzz-->
+		<div class="cnzz" style=display:none>
+				<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263020785'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1263020785%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+			</div>
+		<!--cnzz end-->
 	</div>
-	</div>
-
-
-
-<script>
-//远程连接全屏
-	$("#fullscreen").click(function(){
-		toggleFullscreen();
-	});
-
-	var toggleFullscreen = function(){
-		if(document.fullscreenElement ||
-		   document.mozFullScreenElement ||
-		   document.webkitFullscreenElement ||
-		   document.msFullscreenElement){
-			if (document.exitFullscreen) {
-				document.exitFullscreen();
-
-			} else if (document.mozCancelFullScreen) {
-				document.mozCancelFullScreen();
-			} else if (document.webkitExitFullscreen) {
-				document.webkitExitFullscreen();
-			} else if (document.msExitFullscreen) {
-				document.msExitFullscreen();
-			}
-		}else{
-			if (document.documentElement.requestFullscreen) {
-				document.documentElement.requestFullscreen();
-			} else if (document.documentElement.mozRequestFullScreen) {
-				document.documentElement.mozRequestFullScreen();
-			} else if (document.documentElement.webkitRequestFullscreen) {
-				document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-			} else if (document.body.msRequestFullscreen) {
-				document.body.msRequestFullscreen();
-			}
-		}
-
-		//更新iframe定位
-		update_iframe_pos();
-	}
-
-	//退出全屏时恢复全屏按钮、iframe的定位方式
-	var update_iframe_pos = function(){
-		if(document.fullscreenElement ||
-			document.mozFullScreenElement ||
-			document.webkitFullscreenElement ||
-			document.msFullscreenElement){
-			$("#vplay").addClass("ifr_fixed");
-			$("#fullscreen").addClass("full_fixed");
-		}else{
-			$("#vplay").removeClass("ifr_fixed");
-			$("#fullscreen").removeClass("full_fixed");
-		}
-	}
-
-	//添加退出全屏时的监听事件
-	window.addEventListener("fullscreenchange", function(e) {
-	  update_iframe_pos();
-	});
-	window.addEventListener("mozfullscreenchange", function(e) {
-	  update_iframe_pos();
-	});
-	window.addEventListener("webkitfullscreenchange", function(e) {
-	  update_iframe_pos();
-	});
-	window.addEventListener("msfullscreenchange", function(e) {
-	  update_iframe_pos();
-	});
-</script>
-
-<div id="disqus_thread"></div>
-	<script>
-
-	/**
-	*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-	*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-	/*
-	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-	this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-	};
-	*/
-	(function() { // DON'T EDIT BELOW THIS LINE
-	var d = document, s = d.createElement('script');
-	s.src = 'https://vipvideo.disqus.com/embed.js';
-	s.setAttribute('data-timestamp', +new Date());
-	(d.head || d.body).appendChild(s);
-	})();
-	</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-	<script id="dsq-count-scr" src="//vipvideo.disqus.com/count.js" async></script>
-
-
-	<script>
-	window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"jachin 视频","bdMini":"2","bdMiniList":["weixin","mshare","sqq","qzone","tsina","bdysc","youdao","tqq","kaixin001","tieba","douban","renren","tqf","bdxc","bdhome","evernotecn","meilishuo","fbook","mogujie","mail","linkedin","ty","twi","sdo","ibaidu"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"left","bdTop":"129"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-	</script>
-
-
-	<div class="cnzz" style=display:none>
-		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1263020785'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1263020785%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
-	</div>
-
+	<!--extend end-->
 
 	<footer id="foot">
-		<p class="pioemmmmd">本站解析接口来源于网络</p>
-		<br/>
-		Copyright &copy;2016<a href="http://blog.cumtpn.com">Jachin</a>Allrights reserved.Used with permission.
+			<p class="pioemmmmd">本站解析接口来源于网络</p>
+			<br/>
+			Copyright &copy;2016<a href="http://blog.cumtpn.com">Jachin</a>Allrights reserved.Used with permission.
 	</footer>
 </div>
 <!--end main-->
