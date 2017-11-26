@@ -82,6 +82,8 @@ color:white;
 }
 
 #api{
+width: 95%;
+margin: auto;
 margin-top: 2rem;
 margin-bottom: 2rem;
 text-align: left;
@@ -117,6 +119,8 @@ font-size: 1.8rem;
 }
 
 .msg{
+    width: 95%;
+    margin: auto;
     clear:both;
 	display: block;
 }
@@ -131,7 +135,7 @@ width:auto;
 .logs{
     text-align: left;
     margin:auto;
-    width: 80%;
+    width: 100%;
     display: block;
 }
 .logs .li{
