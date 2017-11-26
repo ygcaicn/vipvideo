@@ -114,7 +114,7 @@ display:inline;
 display:none;
 }
 .okbutton{
-width: 20%;
+width: auto;
 height:30px;
 color:white;
 background-color: #DB7326;
