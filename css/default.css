@@ -226,7 +226,7 @@ a img,img {
 .logos_lists dl {
     float: left;
     position: relative;
-    padding: 1.5rem 1rem;
+    padding: 2rem 2rem;
     margin: 10px;
     background: #fff;
     border: 1px solid #ededed;
@@ -246,7 +246,7 @@ a img,img {
 }
 
 .logos_lists dl dt img {
-    width: 8rem;
+    width: 12rem;
 }
 @media screen and (max-width: 900px) {
 a img,img {
