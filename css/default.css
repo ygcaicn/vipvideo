@@ -46,7 +46,7 @@ display:none;
 }
 
 #vip{
-width: 100%;
+width: 80%;
 margin: auto;
 position:relative;
 border: 0;
@@ -96,6 +96,9 @@ overflow:hidden;
 background-color: rgb(191, 191, 191);
 background-image:url(!snow.gif);
 }
+#vip{
+width: 100%;
+    }
 }
 
 #description{
