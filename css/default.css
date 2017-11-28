@@ -3,7 +3,7 @@ html{
 }
 body{
 	background-color: #008532;
-	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQBAMAAAD+CqKmAAAAElBMVEXz8/Po6Oj////4+Pj7+/v19fXck713AAAAbklEQVQI11XNwQkDMQxE0QFJBWRKSAUCxXeB7bvA2f5bCcHgTf7hXx8eP4HPb/vgLAEoUuKgqeBiZmWA3dBfjJQBcK2spJWqgS1ChLDIAU7NcI6Y3v6djexj2U1BZzsUfL0PBe9+KMh1U7CSQ30ArNcZPoEeBscAAAAASUVORK5CYII=');
+	background-image: url("intersection1.png");
 	position: relative;
 	text-align: center;
 	left: 0;
