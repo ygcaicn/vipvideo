@@ -119,9 +119,10 @@ margin-bottom: 2rem;
 text-align: left;
 background-image: url();
 display:block;
+font-size: 1.8rem;
 }
 #api p{
-    font-size: 1.8rem;
+
     color:#ff7500;
 }
 
