@@ -49,7 +49,7 @@ para = new Para();
 				para.sourceUrl = $.trim(ele.val())
 			}
 			para.index = document.getElementById("insopt").selectedIndex;
-			if(para.sourceUrl!=null)
+			if(para.sourceUrl!=null && para.sourceUrl!="")
 			window.history.pushState({},0,'?index='+para.index+'&src='+para.sourceUrl); 
 		});
 
@@ -84,11 +84,10 @@ function getvideo(){
 	{
 		api = document.getElementById("uapi").value;
 	}
-	if (vurl =="输入您想播放的视频地址......") {
+	if (vurl =="") {
 			alert("请先在输入框内输入正确的视频地址哦！");
 			return false;
 			}
-	alert(api+vurl)
 	document.getElementById("vplay").src=api+vurl;
 }
 
