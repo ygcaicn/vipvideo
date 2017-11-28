@@ -1,19 +1,34 @@
 (function ($) {
 	$(document).ready(function() {
 		var apilist;
+		var sourceUrl;
 		$("#insopt").load("api.html",function(){
 			apilist = document.getElementById("insopt");
-			var xx = $.getUrlParam("src");
-			if(xx != null)
+			sourceUrl = $.getUrlParam("src");
+			if(sourceUrl != null)
 			{
 				var pindex = $.getUrlParam("index");
 				api=apilist.options[pindex?pindex:0].value;
-				document.getElementById("vplay").src=api+xx;
+				document.getElementById("vplay").src=api+sourceUrl;
 				$("#insopt").get(0).selectedIndex=(pindex?pindex:0);
-				$("#url").val(xx);
+				$("#url").val(sourceUrl);
 				$("#source_video").attr("src",$("#url").val());
 				show_title();
 			}
+		});
+		$("#url").blur(function(){
+			if(this.value==''){
+				if(sourceUrl != null){
+					this.val(sourceUrl);
+				}
+				else{
+					this.val('输入您想播放的视频地址......')
+				}
+			}
+		});
+		
+		$("#url").focus(function(){
+			if(this.value!='')this.value='';
 		});
 	});
 
