@@ -47,7 +47,7 @@
 	<!--description end-->
 	<!--api-->
 	<div id=api>
-		<input id="url" type="text" value="输入您想播放的视频地址......" onfocus="if(this.value=='输入您想播放的视频地址......')this.value='';" onblur="if(this.value=='')this.value='输入您想播放的视频地址......';">
+		<input id="url" type="text" value="输入您想播放的视频地址......" onfocus="if(this.value!='')this.value='';" onblur="if(this.value=='')this.value='输入您想播放的视频地址......';">
 
 		<p class="selectid">解析接口：</p>
 		<select class="selectid" id="insopt" onchange="showiapi()">
