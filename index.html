@@ -6,7 +6,7 @@
 	<meta name="keywords" content=vip视频破解,vip视频解析,爱奇艺会员帐号共享,优酷会员帐号共享,优酷VIP解析，爱奇艺VIP解析，腾讯VIP解析，乐视VIP解析，芒果VIP解析>
 	<meta name="description" content="本站为广大网友提供优酷VIP解析，爱奇艺VIP解析，腾讯VIP解析，乐视VIP解析，芒果VIP解析等解析服务，让你省去购买视频VIP费用，欢迎大家收藏本站，并将她介绍给您的朋友!最新最热的的电影电视剧,免费在线观看,vip视频解析,免费电影,爱奇艺会员帐号共享,优酷会员帐号共享,找视频,云盘资源,最新最热的的电影电视剧，免费在线观看,免费在线电影,院线新电影,院线电影,电影票" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1.0, user-scalable=0" />
-	<script type="text/javascript" charset="utf-8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" charset="utf-8" src="js/api.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/default.css" />
 	<link rel="icon" href="http://blog.cumtpn.com/img/favicon.ico">
@@ -23,11 +23,7 @@
 	<!--notice-->
 	<iframe id="notice" src="notice.html"></iframe>
 	<!--notice end-->
-	<!--source_video-->
-<!--
-	<iframe id="source_video" src=""></iframe>
--->
-	<!--source_video end-->
+
 	<!--vip-->
 	<div id="vip">
 		<div id="videoname"></div>
@@ -49,13 +45,12 @@
 	<div id=api>
 		<input id="url" type="text" value="输入您想播放的视频地址......">
 		<p class="selectid">解析接口：</p>
-		<select class="selectid" id="insopt" onchange="showiapi()">
+		<select class="selectid" id="insopt">
 		</select>
 
 		<p class="userapi">用户自定义API解析：</p>
 		<input id="uapi" class="userapi" type="text" value="https://api.flvsp.com/?url=">
-
-		<input class="okbutton" type="button" onclick="getvideo()" value="立即播放">
+		<input class="okbutton" id="okbutton" type="button" value="立即播放">
 	</div>
 	<!--api end-->
 	<!--msg-->

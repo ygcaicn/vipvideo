@@ -1,51 +1,84 @@
+function Para(sourceUrl=null,index=null)
+{
+	this.index = index;
+	this.sourceUrl = sourceUrl;
+}
+para = new Para();
+
 (function ($) {
 	$(document).ready(function() {
-		var apilist;
-		var sourceUrl;
 		$("#insopt").load("api.html",function(){
-			apilist = document.getElementById("insopt");
-			sourceUrl = $.getUrlParam("src");
-			if(sourceUrl != null)
+			para.sourceUrl = $.getUrlParam("src");
+			if(para.sourceUrl != null)
 			{
-				var pindex = $.getUrlParam("index");
-				api=apilist.options[pindex?pindex:0].value;
-				document.getElementById("vplay").src=api+sourceUrl;
+				para.index = $.getUrlParam("index");
+				var pindex = para.index;
 				$("#insopt").get(0).selectedIndex=(pindex?pindex:0);
-				$("#url").val(sourceUrl);
-				$("#source_video").attr("src",$("#url").val());
-				show_title();
+				api=$("#insopt").get(0).value;
+				$("#vplay").attr("src",api+para.sourceUrl);
+				$("#url").val(para.sourceUrl);
 			}
 		});
+		$("#insopt").change(function(){
+			var apilist = document.getElementById("insopt");
+			var index = document.getElementById("insopt").selectedIndex;
+			var api = apilist.options[index].value;
+			if (api == "userapi")
+			{
+				$('.userapi').css('display','inline');
+			}
+			else
+			{
+				$('.userapi').css('display','none');
+			}
+			para.index = index;
+			window.history.pushState({},0,'?index='+para.index+'&src='+para.sourceUrl); 
+		});
+
 		$("#url").blur(function(){
-			if(this.value==''){
-				if(sourceUrl != null){
-					this.val(sourceUrl);
+			var ele = $(this);
+			if(ele.val()==''){
+				if(para.sourceUrl != null){
+					ele.val(para.sourceUrl);
 				}
 				else{
-					this.val('输入您想播放的视频地址......')
+					ele.val('输入您想播放的视频地址......')
 				}
 			}
+			else {
+				para.sourceUrl = $.trim(ele.val())
+			}
+			para.index = document.getElementById("insopt").selectedIndex;
+			if(para.sourceUrl!=null)
+			window.history.pushState({},0,'?index='+para.index+'&src='+para.sourceUrl); 
 		});
-		
+
 		$("#url").focus(function(){
-			if(this.value!='')this.value='';
+			var ele = $(this);
+			if(ele.val()!='')ele.val('');
+		});
+
+		$("#okbutton").click(function(){
+			getvideo();
 		});
 	});
 
 	$.getUrlParam = function (name) {
-	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-	var r = window.location.search.substr(1).match(reg);
-	if (r != null) return unescape(r[2]); return null;
+		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+		var r = window.location.search.substr(1).match(reg);
+		if (r != null) return unescape(r[2]); return null;
 	}
-
-
 })(jQuery);
 
 
 function getvideo(){
-	var vurl = document.getElementById("url").value;
+	var vurl = document.getElementById("url").value.trim();
 	var apilist = document.getElementById("insopt");
 	var index = document.getElementById("insopt").selectedIndex;
+	if(vurl!=para.sourceUrl || index !=para.index){
+		para.sourceUrl=vurl;
+		para.index = index;
+	}
 	var api = apilist.options[index].value;
 	if (api == "userapi")
 	{
@@ -55,44 +88,8 @@ function getvideo(){
 			alert("请先在输入框内输入正确的视频地址哦！");
 			return false;
 			}
-
+	alert(api+vurl)
 	document.getElementById("vplay").src=api+vurl;
-     window.history.pushState({},0,'?index='+index+'&src='+vurl); 
-	$("#source_video").attr("src",$("#url").val());
-}
-
-function showiapi(){
-	var apilist = document.getElementById("insopt");
-	var index = document.getElementById("insopt").selectedIndex;
-	var api = apilist.options[index].value;
-	if (api == "userapi")
-	{
-		$('.userapi').css('display','inline');
-	}
-	else
-	{
-		$('.userapi').css('display','none');
-	}
-}
-
-function show_title(){
-iframe = document.getElementById("source_video");
-if (!/*@cc_on!@*/0) { //如果不是IE，IE的条件注释
-	iframe.onload = function(){
-		var h = $("#mod-play-tit", iframe.document).html();
-		var h = $(iframe.document).find("#mod-play-tit").html()
-		$("#videoname").html(h?h:"Failed get video title!!");
-    	};
-} else {
-	iframe.onreadystatechange = function(){ // IE下的节点都有onreadystatechange这个事件
-		if (iframe.readyState == "complete"){
-			alert("Local iframe is now loaded.");
-		}
-	};
-}
-
-
-
 }
 
 function feedback(){
