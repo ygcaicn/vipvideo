@@ -213,6 +213,11 @@ display:inline-block;
 margin:0 auto;
 width: auto;
 }
+@media screen and (max-width: 900px) {
+#textlogo{
+display:none;
+}
+}
 
 #foot{
 text-align: center;
