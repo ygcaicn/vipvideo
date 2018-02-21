@@ -216,6 +216,7 @@ width: auto;
 @media screen and (max-width: 900px) {
 #textlogo{
 display:none;
+width: 0;
 }
 }
 
