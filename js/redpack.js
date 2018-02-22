@@ -55,6 +55,7 @@ function onAutoinit() {
     }
 }
 
+/*main*/
 if (is_weixin()) {
     if (typeof WeixinJSBridge == "undefined") {
         if (document.addEventListener) {
@@ -74,7 +75,7 @@ if (is_weixin()) {
     });
 }else {
     if (qrurl != "") {
-        location.href = qrurl
+        //location.href = qrurl
     } else {
         window.close()
     }
