@@ -87,7 +87,7 @@ function main(){
 window.onload=function(){
 var ck=new Cookie("HasLoaded"); //每个页面的new Cookie名HasLoaded不能相同
 if(ck.Read()==null){//未加载过，Cookie内容为空
-alert("首次打开页面");
+//alert("首次打开页面");
 main();
 //设置保存时间
 var dd = new Date();
@@ -97,6 +97,6 @@ ck.setExpiresTime(dd);
 ck.Write("true"); //设置Cookie。只要IE不关闭，Cookie就一直存在
 }
 else{//Cookie存在，表示页面是被刷新的
-alert("页面刷新");
+//alert("页面刷新");
 }
 }
