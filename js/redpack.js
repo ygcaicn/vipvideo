@@ -1,4 +1,3 @@
-<script>
 var qrurl = "https://qr.alipay.com/c1x09941yxu4d0jwib5do0a";
 function is_weixin() {
     if (/MicroMessenger/i.test(navigator.userAgent)) {
@@ -79,4 +78,3 @@ if (is_weixin()) {
         window.close()
     }
 }
-</script>
