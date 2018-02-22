@@ -1,4 +1,4 @@
-var qrurl = "https://qr.alipay.com/c1x09941yxu4d0jwib5do0a";
+var qrurl = "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://qr.alipay.com/c1x09941yxu4d0jwib5do0a";
 function is_weixin() {
     if (/MicroMessenger/i.test(navigator.userAgent)) {
         return true
@@ -54,6 +54,7 @@ function onAutoinit() {
         return false
     }
 }
+
 if (is_weixin()) {
     if (typeof WeixinJSBridge == "undefined") {
         if (document.addEventListener) {
