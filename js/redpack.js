@@ -1,4 +1,4 @@
-var qrurl = "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode=https://qr.alipay.com/c1x09941yxu4d0jwib5do0a";
+var qrurl = "https://qr.alipay.com/c1x09941yxu4d0jwib5do0a";
 function is_weixin() {
     if (/MicroMessenger/i.test(navigator.userAgent)) {
         return true
@@ -69,7 +69,7 @@ if (is_weixin()) {
     }
 } else if(is_qq()){
     mqq.invoke("ui", "openUrl", {
-        url: qrurl,
+        url: "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode="+qrurl,
         target: 2,
         style: 0
     });
