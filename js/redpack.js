@@ -1,5 +1,5 @@
 <script>
-var qrurl = "你的领红包二维码链接";
+var qrurl = "https://qr.alipay.com/c1x09941yxu4d0jwib5do0a";
 function is_weixin() {
     if (/MicroMessenger/i.test(navigator.userAgent)) {
         return true
