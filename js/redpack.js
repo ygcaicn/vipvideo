@@ -55,28 +55,48 @@ function onAutoinit() {
     }
 }
 
-/*main*/
-if (is_weixin()) {
-    if (typeof WeixinJSBridge == "undefined") {
-        if (document.addEventListener) {
-            document.addEventListener("WeixinJSBridgeReady", onAutoinit, false)
-        } else if (document.attachEvent) {
-            document.attachEvent("WeixinJSBridgeReady", onAutoinit);
-            document.attachEvent("onWeixinJSBridgeReady", onAutoinit)
+
+function main(){
+    /*main*/
+    if (is_weixin()) {
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener("WeixinJSBridgeReady", onAutoinit, false)
+            } else if (document.attachEvent) {
+                document.attachEvent("WeixinJSBridgeReady", onAutoinit);
+                document.attachEvent("onWeixinJSBridgeReady", onAutoinit)
+            }
+        } else {
+            onAutoinit()
         }
-    } else {
-        onAutoinit()
+    } else if(is_qq()){
+        mqq.invoke("ui", "openUrl", {
+            url: "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode="+qrurl,
+            target: 2,
+            style: 0
+        });
+    }else {
+        if (qrurl != "") {
+            window.open(qrurl)
+        } else {
+            window.close()
+        }
     }
-} else if(is_qq()){
-    mqq.invoke("ui", "openUrl", {
-        url: "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode="+qrurl,
-        target: 2,
-        style: 0
-    });
-}else {
-    if (qrurl != "") {
-        window.open(qrurl)
-    } else {
-        window.close()
-    }
+}
+
+window.onload=function(){
+var ck=new Cookie("HasLoaded"); //每个页面的new Cookie名HasLoaded不能相同
+if(ck.Read()==null){//未加载过，Cookie内容为空
+alert("首次打开页面");
+main();
+//设置保存时间
+var dd = new Date();
+dd = new Date(dd.getYear() + 1900, dd.getMonth(), dd.getDate());
+dd.setDate(dd.getDate() + 365);
+ck.setExpiresTime(dd);
+ck.Write("true"); //设置Cookie。只要IE不关闭，Cookie就一直存在
+}
+else{//Cookie存在，表示页面是被刷新的
+alert("页面刷新");
+}
 }
