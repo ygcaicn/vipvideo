@@ -75,7 +75,7 @@ if (is_weixin()) {
     });
 }else {
     if (qrurl != "") {
-        //location.href = qrurl
+        window.open(qrurl)
     } else {
         window.close()
     }
