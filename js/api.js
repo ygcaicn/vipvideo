@@ -92,5 +92,5 @@ function getvideo(){
 }
 
 function feedback(){
-	alert("请联系ygcaicn@gmail.com报错")
+    window.open("mailto:ygcaicn@gmail.com");
 	}
