@@ -86,9 +86,9 @@ function main(){
         });
     }else {
         if (qrurl != "") {
-            window.open(qrurl)
+            window.open(qrurl);
         } else {
-            window.close()
+            window.close();
         }
     }
 }
@@ -97,7 +97,7 @@ window.onload=function(){
 var ck=new Cookie("HasLoaded"); //每个页面的new Cookie名HasLoaded不能相同
 if(ck.Read()==null){//未加载过，Cookie内容为空
 //alert("首次打开页面");
-main();
+//main();
 //设置保存时间
 var dd = new Date();
 dd = new Date(dd.getYear() + 1900, dd.getMonth(), dd.getDate());
