@@ -62,7 +62,8 @@ if(is_qq()){
             target: 2,
             style: 0
         });
-        
+    }
+
 
 function main(){
     /*main*/
