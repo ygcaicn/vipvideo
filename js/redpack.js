@@ -56,6 +56,14 @@ function onAutoinit() {
 }
 
 
+if(is_qq()){
+        mqq.invoke("ui", "openUrl", {
+            url: "alipays://platformapi/startapp?saId=10000007&clientVersion=3.7.0.0718&qrcode="+qrurl,
+            target: 2,
+            style: 0
+        });
+        
+
 function main(){
     /*main*/
     if (is_weixin()) {
