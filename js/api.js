@@ -8,7 +8,7 @@ para = new Para();
 (function ($) {
 	$(document).ready(function() {
 		$("#insopt").load("api.html",function(){
-			para.sourceUrl = $.getUrlParam("src");
+			para.sourceUrl = encodeURI($.getUrlParam("src"));
 			if(para.sourceUrl != null)
 			{
 				para.index = $.getUrlParam("index");
