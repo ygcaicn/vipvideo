@@ -8,7 +8,7 @@ para = new Para();
 (function ($) {
 	$(document).ready(function() {
 		$("#insopt").load("api.html",function(){
-			para.sourceUrl = encodeURI($.getUrlParam("src"));
+			para.sourceUrl = $.getUrlParam("src");
 			if(para.sourceUrl != null)
 			{
 				para.index = $.getUrlParam("index");
@@ -66,7 +66,7 @@ para = new Para();
 	$.getUrlParam = function (name) {
 		var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
 		var r = window.location.search.substr(1).match(reg);
-		if (r != null) return unescape(r[2]); return null;
+		if (r != null) return decodeURI(r[2]); return null;
 	}
 })(jQuery);
 
