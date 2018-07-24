@@ -7,18 +7,22 @@ para = new Para();
 
 (function ($) {
 	$(document).ready(function() {
-		$("#insopt").load("api.html",function(){
-			para.sourceUrl = $.getUrlParam("src");
-			if(para.sourceUrl != null)
-			{
-				para.index = $.getUrlParam("index");
-				var pindex = para.index;
-				$("#insopt").get(0).selectedIndex=(pindex?pindex:0);
-				api=$("#insopt").get(0).value;
-				$("#vplay").attr("src",api+para.sourceUrl);
-				$("#url").val(para.sourceUrl);
-			}
-		});
+		htmlobj=$.ajax({url:"api.html",async:false});
+		$("#insopt").html(htmlobj.responseText);
+		para.sourceUrl = $.getUrlParam("src");
+		if(para.sourceUrl != null)
+		{
+			para.index = $.getUrlParam("index");
+			var pindex = para.index;
+			$("#insopt").get(0).selectedIndex=(pindex?pindex:0);
+			api=$("#insopt").get(0).value;
+			$("#vplay").attr("src",api+para.sourceUrl);
+			$("#url").val(para.sourceUrl);
+		}
+
+
+
+
 		$("#insopt").change(function(){
 			var apilist = document.getElementById("insopt");
 			var index = document.getElementById("insopt").selectedIndex;
